@@ -79,7 +79,7 @@ namespace removeCode
             var files = Directory.GetFiles(args[0], "*.cs", SearchOption.AllDirectories);
             for (int f = 0; f < files.Length; f++) {
                 var file = files[f];
-                var text = File.ReadAllText("/Volumes/devel/bashutils/NSAttributeDescription.cs");
+                var text = File.ReadAllText(file);
                 var tree = CSharpSyntaxTree.ParseText(text);
                 var removeCode = new RemoveCodeVisitor();
                 var result = removeCode.Visit(tree.GetRoot());
