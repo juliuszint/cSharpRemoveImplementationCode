@@ -1,4 +1,4 @@
 function ProjectRun()
-    let output = system('mono ./src/bin/Debug/removecode.exe ./data/ true')
+    let output = system('mono ./src/bin/Debug/cSharpRemoveImplementationCode.exe ./data/ true')
     call ShowInReadonlyBuffer(output)
 endfunction

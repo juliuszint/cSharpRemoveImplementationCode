@@ -5,9 +5,9 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace removeCode
+namespace CsharpRemoveImplementationCode
 {
-    public class RemoveCodeVisitor : CSharpSyntaxRewriter
+    public class CsharpRemoveImplementationCodeVisitor : CSharpSyntaxRewriter
     {
         private string indentString;
 
@@ -119,7 +119,7 @@ namespace removeCode
         public static void Main(string[] args)
         {
             if(args.Length < 1) {
-                Console.WriteLine($"Usage: removeCode.exe SRCDIR [SUPRESSWRITE]");
+                Console.WriteLine($"Usage: CsharpRemoveImplementationCode.exe SRCDIR [SUPRESSWRITE]");
                 return;
             }
 
@@ -136,8 +136,8 @@ namespace removeCode
                 var file = files[f];
                 var text = File.ReadAllText(file);
                 var tree = CSharpSyntaxTree.ParseText(text);
-                var removeCode = new RemoveCodeVisitor();
-                var result = removeCode.Visit(tree.GetRoot());
+                var csharpRemoveImplementationCode = new CsharpRemoveImplementationCodeVisitor();
+                var result = csharpRemoveImplementationCode.Visit(tree.GetRoot());
                 var resultText = result
                     .NormalizeWhitespace()
                     .ToFullString();

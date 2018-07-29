@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "removeCode", "removeCode.csproj", "{5A60621F-9F9D-420E-BFC8-593D3096ABB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSharpRemoveImplementationCode", "cSharpRemoveImplementationCode.csproj", "{5A60621F-9F9D-420E-BFC8-593D3096ABB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
