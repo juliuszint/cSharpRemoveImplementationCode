@@ -4,4 +4,4 @@ default:
 			/property:GenerateFullPaths=true \
 			/property:Configuration=Debug \
 			/property:AutoGenerateBindingRedirects=true \
-			removeCode.sln
+			src/removeCode.sln
